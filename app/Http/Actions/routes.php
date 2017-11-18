@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Responses\ExampleResponse;
+namespace App\Http\Actions;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +17,4 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('/example', 'ExampleAction');
+$router->get('/example', ExampleAction::class);
