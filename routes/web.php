@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Responses\ExampleResponse;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -13,4 +15,8 @@
 
 $router->get('/', function () use ($router) {
     return $router->app->version();
+});
+
+$router->get('/example', function() {
+    return new ExampleResponse();
 });
